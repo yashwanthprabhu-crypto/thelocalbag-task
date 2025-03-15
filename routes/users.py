@@ -19,6 +19,10 @@ async def create_user(user: UserCreate):
     users_db[user.id] = user.dict()
     return {"message": "User created successfully"}
 
+@router.get("/", response_model=List[User])
+async def get_users():
+    return list(users_db.values())
+
 @router.get("/search/by-name", response_model=List[User])
 async def search_users(name: str = Query(..., min_length=2)):
     if not name.strip():
