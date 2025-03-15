@@ -39,3 +39,4 @@ fastapi_crud_project/
 - GET /users/search - Search users by name
 - PUT /users/{user_id} - Update user
 - DELETE /users/{user_id} - Delete user# Thelocalbag-Task
+# thelocalbag-task
